@@ -15,10 +15,10 @@ import { Link, router } from "expo-router";
 import CustomButton from "@/components/CustomButton";
 import registerUser from "@/hooks/useRegisterUser";
 import useRegisterUser from "@/hooks/useRegisterUser";
+import images from "@/constants/images";
 
 const Register = () => {
   const [form, setForm] = useState({
-    username: "",
     email: "",
     password: "",
     first_name: "",
@@ -37,7 +37,6 @@ const Register = () => {
   const registerUser = useRegisterUser();
   const handleSubmit = async () => {
     if (
-      !form.username ||
       !form.email ||
       !form.password ||
       !form.first_name ||
@@ -82,13 +81,13 @@ const Register = () => {
         showsVerticalScrollIndicator={false}
       >
         <View className="w-full  justify-center min-h-[85vh] px-4 my-6">
-          {/* <View>
-                <Image
-                source={icons.backArrow}
-                resizeMode="contain"
-                className="w-6 h-6"
-                />
-            </View> */}
+          <View className="w-full justify-center flex items-center">
+            <Image
+              source={images.ZIMNERVE_lime_logo}
+              resizeMode="contain"
+              className="h-[70px] w-[70px]"
+            />
+          </View>
           <Text className="text-2xl text-center font-bold text-md text-black py-6">
             Create your account{" "}
           </Text>
@@ -104,12 +103,6 @@ const Register = () => {
               value={form.last_name}
               handleChangeText={(e) => setForm({ ...form, last_name: e })}
               placeholder="Last Name"
-            />
-            <FormField
-              title="Username"
-              value={form.username}
-              handleChangeText={(e) => setForm({ ...form, username: e })}
-              placeholder="Username"
             />
             <FormField
               title="Email"

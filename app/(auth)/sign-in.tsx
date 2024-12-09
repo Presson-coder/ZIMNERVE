@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, TouchableOpacity } from "react-native";
+import { View, Text, ScrollView, TouchableOpacity, Image } from "react-native";
 
 import React, { useState } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -6,6 +6,7 @@ import FormField from "@/components/FormField";
 import { Link, router } from "expo-router";
 import CustomButton from "@/components/CustomButton";
 import useSignin from "@/hooks/useSignin";
+import images from "@/constants/images";
 
 const SignIn = () => {
   const [form, setForm] = useState({
@@ -50,13 +51,13 @@ const SignIn = () => {
         showsVerticalScrollIndicator={false}
       >
         <View className="w-full  justify-center min-h-[85vh] px-4 my-6">
-          {/* <View>
-                <Image
-                source={icons.backArrow}
-                resizeMode="contain"
-                className="w-6 h-6"
-                />
-            </View> */}
+          <View className="w-full justify-center flex items-center">
+            <Image
+              source={images.ZIMNERVE_lime_logo}
+              resizeMode="contain"
+              className="h-[70px] w-[70px]"
+            />
+          </View>
           <Text className="text-2xl text-center font-bold text-md text-black py-6">
             Sign In to your account{" "}
           </Text>

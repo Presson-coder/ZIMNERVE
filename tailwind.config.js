@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+import { green } from "react-native-reanimated/lib/typescript/Colors";
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./app/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
@@ -11,6 +12,7 @@ module.exports = {
           100: "#E2E2D5",
           200: "#888883",
         },
+        nevGreen: "006837",
         darkBg: "#262626",
         limeBg: "#8bc53e",
       },

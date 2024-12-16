@@ -1,81 +1,67 @@
 import { Link, router } from "expo-router";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import "../global.css";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
 import CustomButton from "@/components/CustomButton";
 import LottieView from "lottie-react-native";
 import lottie from "@/constants/lottieFiles";
+import { StatusBar } from "expo-status-bar";
+import CircleLoader from "@/components/CircleLoaders";
 
 export default function App() {
   return (
-    <SafeAreaView className=" flex-1 bg-[]">
-      {/*  background image */}
-      <Image
-        source={images.laptop}
-        className="absolute top-0 left-0 w-full h-full "
-        resizeMode="cover"
-      />
-      {/* overlay on image */}
-      <View className="absolute top-0 left-0 w-full h-full bg-primary bg-opacity-10 "></View>
-      <ScrollView
-        className="flex-1 px-6 border border-white my-28 mx-10 rounded-3xl"
-        contentContainerStyle={{
-          flexGrow: 1, // Ensures content container fills the available space
-          justifyContent: "center", // Centers vertically
-          alignItems: "center", // Centers horizontally
-        }}
-        showsVerticalScrollIndicator={false}
-      >
-        {/* Main content wrapper */}
-        <View className="w-full flex flex-col items-center gap-1 justify-center px-4">
-          {/* Logo */}
-          <View className="relative flex justify-center w-full">
-            <Image
-              source={images.ZimNerve_Green_Logo}
-              className="h-[84px] left-1/2 -translate-x-1/2"
-              resizeMode="contain"
-            />
-            <Text className="text-white z-50 font-extrabold text-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-              ZIM
-              <Text className="font-thin text-white">NERVE</Text>
+    <>
+      <SafeAreaView className=" flex-1 relative bg-[]">
+        <Image
+          source={images.pcBg1}
+          className="absolute top-0 bottom-0 left-0 w-full h-full"
+          resizeMode="cover"
+        />
+        {/* overlay on image */}
+        <View className="absolute inset-0 bg-primary opacity-90" />
+        <ScrollView
+          className="flex-1 "
+          contentContainerStyle={{
+            flexGrow: 1, // Ensures content container fills the available space
+            justifyContent: "center", // Centers vertically
+            alignItems: "center", // Centers horizontally
+          }}
+          showsVerticalScrollIndicator={false}
+        >
+          <View className="w-full flex flex-col items-center gap-10 justify-center px-4">
+            <View className="relative flex justify-center w-full">
+              <Image
+                source={images.ZimNerve_Green_Logo}
+                className="h-[90px] w-[90px] left-1/2 -translate-x-1/2"
+                resizeMode="contain"
+              />
+              <Text className="text-white z-50 font-extrabold text-2xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                ZIM
+                <Text className="font-thin text-white">NERVE</Text>
+              </Text>
+            </View>
+            <Text className="text-blackx font-thin text-sm text-center w-full py-2">
+              ONLINE SHOPPING AND ADVERTISEMENT
             </Text>
+            <TouchableOpacity
+              onPress={() => router.push("/online-shopping")}
+              className="bg-lime-500 rounded-3xl flex items-center w-1/2"
+            >
+              <Text className="text-black font-bold text-center p-3">
+                Sign In
+              </Text>
+            </TouchableOpacity>
+            <View>
+              <CircleLoader/>
+            </View> 
+            <Text className="text-white font-bold">
+              Welcome to endless possibilities   
+            </Text> 
           </View>
-
-          {/* Tagline */}
-          <Text className="text-blackx font-extralight text-sm text-center w-full py-2">
-            ONLINE SHOPPING AND ADVERTISEMENT
-          </Text>
-
-          {/* Sign In Button */}
-          <CustomButton
-            handlePress={() => {
-              router.push("/online-shopping");
-            }}
-            title="Sign In"
-            containerStyles="rounded-3xl bg-lime-700 py-1 items-center w-40"
-            textStyles="text-black font-bold text-xl"
-          />
-
-          {/* Lottie Animation */}
-          <View className="flex w-full justify-center items-center">
-            <LottieView
-              source={lottie.helloAnimation}
-              autoPlay
-              loop
-              style={{
-                width: 200,
-                height: 200,
-              }}
-            />
-          </View>
-
-          {/* Footer Text */}
-          <Text className="text-lime-900">
-            Welcome to endless possibilities
-          </Text>
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
+      <StatusBar backgroundColor="#80af49" style="light" />
+    </>
   );
 }

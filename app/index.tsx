@@ -9,7 +9,7 @@ import lottie from "@/constants/lottieFiles";
 
 export default function App() {
   return (
-    <SafeAreaView className=" flex-1  bg-[]">
+    <SafeAreaView className=" flex-1 bg-[]">
       {/*  background image */}
       <Image
         source={images.laptop}
@@ -19,7 +19,7 @@ export default function App() {
       {/* overlay on image */}
       <View className="absolute top-0 left-0 w-full h-full bg-primary bg-opacity-10 "></View>
       <ScrollView
-        className="flex-1 px-6"
+        className="flex-1 px-6 border border-white my-28 mx-10 rounded-3xl"
         contentContainerStyle={{
           flexGrow: 1, // Ensures content container fills the available space
           justifyContent: "center", // Centers vertically
@@ -28,11 +28,11 @@ export default function App() {
         showsVerticalScrollIndicator={false}
       >
         {/* Main content wrapper */}
-        <View className="w-full flex flex-col items-center gap-10 justify-center px-4">
+        <View className="w-full flex flex-col items-center gap-1 justify-center px-4">
           {/* Logo */}
           <View className="relative flex justify-center w-full">
             <Image
-              source={images.ZIMNERVE_lime_logo}
+              source={images.ZimNerve_Green_Logo}
               className="h-[84px] left-1/2 -translate-x-1/2"
               resizeMode="contain"
             />
@@ -43,7 +43,7 @@ export default function App() {
           </View>
 
           {/* Tagline */}
-          <Text className="text-blackx font-extralight text-sm text-center w-full">
+          <Text className="text-blackx font-extralight text-sm text-center w-full py-2">
             ONLINE SHOPPING AND ADVERTISEMENT
           </Text>
 

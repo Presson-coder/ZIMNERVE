@@ -11,6 +11,8 @@ module.exports = {
           100: "#E2E2D5",
           200: "#888883",
         },
+        darkBg: "#262626",
+        limeBg: "#8bc53e",
       },
     },
   },

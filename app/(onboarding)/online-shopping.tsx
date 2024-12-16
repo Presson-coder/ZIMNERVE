@@ -17,7 +17,7 @@ const OnlineShopping = () => {
             <View className="w-1 bg-white h-0.5"></View>
             <View className="w-1 bg-white h-0.5"></View>
           </View>
-          <TouchableOpacity className="flex flex-row items-center gap-1 absolute right-3 ">
+          <TouchableOpacity onPress={() => router.push("/sign-in")} className="flex flex-row items-center gap-1 absolute right-3 ">
             <Text className="text-white text-xs">Skip</Text>
             <AntDesign name="right" size={15} color="white" />
           </TouchableOpacity>

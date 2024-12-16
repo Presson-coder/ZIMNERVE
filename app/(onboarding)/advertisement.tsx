@@ -17,7 +17,10 @@ const Advertisement = () => {
             <View className="w-10 bg-white h-0.5"></View>
             <View className="w-1 bg-white h-0.5"></View>
           </View>
-          <TouchableOpacity className="flex flex-row items-center gap-1 absolute right-3 ">
+          <TouchableOpacity
+            onPress={() => router.push("/sign-in")}
+            className="flex flex-row items-center gap-1 absolute right-3 "
+          >
             <Text className="text-white text-xs">Skip</Text>
             <AntDesign name="right" size={15} color="white" />
           </TouchableOpacity>
@@ -43,9 +46,7 @@ const Advertisement = () => {
             </View>
 
             <View className="flex flex-row justify-center items-center gap-3 pb-1 ">
-              <TouchableOpacity
-                onPress={() => router.push("/online-shopping")}
-              >
+              <TouchableOpacity onPress={() => router.push("/online-shopping")}>
                 <MaterialCommunityIcons
                   name="checkbox-blank-circle"
                   size={18}

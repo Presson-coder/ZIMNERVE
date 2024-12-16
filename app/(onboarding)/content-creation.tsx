@@ -103,7 +103,7 @@ const ContentCreation = () => {
               Africa&apos;s most valued app for business gowth{" "}
             </Text>
             <TouchableOpacity
-              onPress={() => router.push("/sign-in")}
+              onPress={() => router.push("/")}
               className="bg-primary rounded-2xl flex items-center w-3/4"
             >
               <Text className="text-white font-bold text-center p-3">

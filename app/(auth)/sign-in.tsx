@@ -76,7 +76,7 @@ const SignIn = () => {
             />
             <CustomButton
               title={`${isSubmitting ? "Loading..." : "SIGN IN"}`}
-              handlePress={handleSubmit}
+              handlePress={() => {router.push("/(tabs)/home")}}
               containerStyles="mt-7 bg-primary"
               isLoading={isSubmitting}
               textStyles="text-white font-bold"

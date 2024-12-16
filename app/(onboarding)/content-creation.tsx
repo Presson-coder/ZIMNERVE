@@ -33,11 +33,12 @@ const ContentCreation = () => {
                 ContentCreation
               </Text>
               <Text
-                className="text-lg absolute bottom-1/4 px-3"
+                className="text-lg absolute bottom-1 px-3"
                 style={{ fontWeight: 100 }}
               >
-                The nerve digital space helps business grow their clientele base
-                through latest online marketing technologies.
+                THigh Quality Professional Videos & Pictures Comprehensive
+                Graphic Design Work Comprehensive Websites & Mobille Apps Best
+                Consultant practices
               </Text>
             </View>
 
@@ -52,7 +53,7 @@ const ContentCreation = () => {
           </View>
         </View>
         <View className="bg-darkBg h-full w-full gap-4 pt-8">
-          <View className="flex flex-col gap-3 pl-7 ">
+          {/* <View className="flex flex-col gap-3 pl-7 ">
             <CustomStar
               starText="Cultivate your digital presence"
               starStyles=""
@@ -68,7 +69,7 @@ const ContentCreation = () => {
               starStyles=""
               textStyles="text-primary"
             />
-          </View>
+          </View> */}
           <View className="w-full justify-center items-center flex py-5 gap-2">
             <View>
               <Image

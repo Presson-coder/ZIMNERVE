@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-const Queue = () => {
+const Categories = () => {
   return (
     <View>
-      <Text>Queue</Text>
+      <Text>Categories</Text>
     </View>
   );
 };
 
-export default Queue;
+export default Categories;

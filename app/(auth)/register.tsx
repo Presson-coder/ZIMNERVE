@@ -152,14 +152,14 @@ const Register = () => {
             <CustomButton
               title={`${isSubmitting ? "Loading..." : "SIGN UP"}`}
               handlePress={handleSubmit}
-              containerStyles="mt-7"
+              containerStyles="mt-7 bg-primary"
               isLoading={isSubmitting}
               textStyles="text-white font-bold"
             />
             <View className="mt-6 flex-row justify-center">
               <Text className="text-gray-500">Have an account? </Text>
               <TouchableOpacity onPress={() => router.push("/(auth)/sign-in")}>
-                <Text className="text-green-600 font-bold">SIGN IN</Text>
+                <Text className="text-primary font-bold">SIGN IN</Text>
               </TouchableOpacity>
             </View>
           </View>

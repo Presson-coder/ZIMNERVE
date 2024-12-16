@@ -5,6 +5,7 @@ import images from "@/constants/images";
 import CustomStar from "@/components/CustomStar";
 import { router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign"; 
+import { FontAwesome6, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const OnlineShopping = () => {
   return (
@@ -42,18 +43,25 @@ const OnlineShopping = () => {
             </View>
 
             <View className="flex flex-row justify-center items-center gap-3 pb-1 ">
-              <TouchableOpacity
-                onPress={() => router.push("/online-shopping")}
-                className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/advertisement")}
-                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
+              <TouchableOpacity onPress={() => router.push("/online-shopping")}>
+                <FontAwesome6 name="circle" size={20} color="white" />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => router.push("/advertisement")}>
+                <MaterialCommunityIcons
+                  name="checkbox-blank-circle"
+                  size={18}
+                  color="white"
+                />
+              </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => router.push("/content-creation")}
-                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
+              >
+                <MaterialCommunityIcons
+                  name="checkbox-blank-circle"
+                  size={18}
+                  color="white"
+                />
+              </TouchableOpacity>
             </View>
           </View>
         </View>

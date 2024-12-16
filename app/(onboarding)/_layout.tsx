@@ -24,7 +24,7 @@ export default function OnBoardingLayout() {
           }}
         />
       </Stack>
-      <StatusBar backgroundColor="#161622" style="light"/>
+      <StatusBar backgroundColor="#262626" style="light" />
     </>
   );
 }

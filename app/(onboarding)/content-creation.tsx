@@ -2,9 +2,10 @@ import { View, Text, Image, ScrollView, TouchableOpacity } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
-import CustomStar from "@/components/CustomStar";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
 const ContentCreation = () => {
   return (
@@ -45,16 +46,25 @@ const ContentCreation = () => {
             <View className="flex flex-row justify-center items-center gap-3 pb-1 ">
               <TouchableOpacity
                 onPress={() => router.push("/online-shopping")}
-                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => router.push("/advertisement")}
-                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
+              >
+                <MaterialCommunityIcons
+                  name="checkbox-blank-circle"
+                  size={18}
+                  color="white"
+                />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => router.push("/advertisement")}>
+                <MaterialCommunityIcons
+                  name="checkbox-blank-circle"
+                  size={18}
+                  color="white"
+                />
+              </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => router.push("/content-creation")}
-                className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"
-              ></TouchableOpacity>
+              >
+                <FontAwesome6 name="circle" size={20} color="white" />
+              </TouchableOpacity>
             </View>
           </View>
         </View>

@@ -6,19 +6,19 @@ export default function OnBoardingLayout() {
     <>
       <Stack>
         <Stack.Screen
-          name="first-screen"
+          name="online-shopping"
           options={{
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name="second-screen"
+          name="content-creation"
           options={{
             headerShown: false,
           }}
         />
         <Stack.Screen
-          name="third-screen"
+          name="advertisement"
           options={{
             headerShown: false,
           }}

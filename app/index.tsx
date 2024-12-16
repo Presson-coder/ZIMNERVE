@@ -50,7 +50,7 @@ export default function App() {
           {/* Sign In Button */}
           <CustomButton
             handlePress={() => {
-              router.push("/first-screen");
+              router.push("/online-shopping");
             }}
             title="Sign In"
             containerStyles="rounded-3xl bg-lime-700 py-1 items-center w-40"

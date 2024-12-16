@@ -42,12 +42,18 @@ const OnlineShopping = () => {
             </View>
 
             <View className="flex flex-row justify-center items-center gap-3 pb-1 ">
-              <TouchableOpacity className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => router.push("/online-shopping")}
+                className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"
+              ></TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => router.push("/advertisement")}
+                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
+              ></TouchableOpacity>
               <TouchableOpacity
                 onPress={() => router.push("/content-creation")}
                 className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
               ></TouchableOpacity>
-              <TouchableOpacity className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
             </View>
           </View>
         </View>
@@ -99,7 +105,10 @@ const OnlineShopping = () => {
               {" "}
               Africa&apos;s most valued app for business gowth{" "}
             </Text>
-            <TouchableOpacity onPress={() =>router.push("/advertisement")} className="bg-primary rounded-2xl flex items-center w-3/4">
+            <TouchableOpacity
+              onPress={() => router.push("/advertisement")}
+              className="bg-primary rounded-2xl flex items-center w-3/4"
+            >
               <Text className="text-white font-bold text-center p-3">
                 Continue
               </Text>

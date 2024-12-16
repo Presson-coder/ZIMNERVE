@@ -43,11 +43,17 @@ const Advertisement = () => {
 
             <View className="flex flex-row justify-center items-center gap-3 pb-1 ">
               <TouchableOpacity
+                onPress={() => router.push("/online-shopping")}
+                className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
+              ></TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => router.push("/advertisement")}
+                className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"
+              ></TouchableOpacity>
+              <TouchableOpacity
                 onPress={() => router.push("/content-creation")}
                 className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
               ></TouchableOpacity>
-              <TouchableOpacity className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
-              <TouchableOpacity className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
             </View>
           </View>
         </View>

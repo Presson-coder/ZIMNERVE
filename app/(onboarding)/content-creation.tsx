@@ -13,8 +13,8 @@ const ContentCreation = () => {
         <View className="w-full flex flex-row h-8 items-center relative my-2">
           <View className="flex flex-row items-center gap-1 left-3">
             <View className="w-1 bg-white h-0.5"></View>
-            <View className="w-10 bg-white h-0.5"></View>
             <View className="w-1 bg-white h-0.5"></View>
+            <View className="w-10 bg-white h-0.5"></View>
           </View>
           <TouchableOpacity className="flex flex-row items-center gap-1 absolute right-3 ">
             <Text className="text-white text-xs">Skip</Text>
@@ -47,8 +47,8 @@ const ContentCreation = () => {
                 onPress={() => router.push("/content-creation")}
                 className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"
               ></TouchableOpacity>
-              <TouchableOpacity className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
               <TouchableOpacity className="w-2.5 h-2.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
+              <TouchableOpacity className="w-3.5 h-3.5 rounded-full bg-white shadow-sm"></TouchableOpacity>
             </View>
           </View>
         </View>

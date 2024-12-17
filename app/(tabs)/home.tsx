@@ -36,22 +36,22 @@ const Home = () => {
         >
           <CategoryCard
             name="Second hand deals"
-            image={images.electronics}
+            image={images.secondHand}
             onPress={() => router.push("/second-hand-deals")}
           />
           <CategoryCard
             name="Real Estate"
-            image={images.electronics}
+            image={images.realEstate}
             onPress={() => router.push("/real-estate")}
           />
           <CategoryCard
             name="Rentals"
-            image={images.electronics}
+            image={images.rentals}
             onPress={() => router.push("/rentals")}
           />
           <CategoryCard
             name="Furniture"
-            image={images.electronics}
+            image={images.furniture}
             onPress={() => router.push("/furniture")}
           />
         </ScrollView>

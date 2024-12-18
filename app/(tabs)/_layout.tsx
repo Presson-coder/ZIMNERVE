@@ -1,6 +1,6 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
-import { Stack, Tabs } from "expo-router";
+import { Tabs } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
@@ -14,13 +14,8 @@ interface TabIconProps {
 
 const TabIcon = ({ name, icon, color, focused }: TabIconProps) => {
   return (
-    <View className="items-center justify-center flex flex-col w-20 gap-2">
-      <Image
-        source={icon}
-        className="w-6 h-6"
-        resizeMode="contain"
-        tintColor={color}
-      />
+    <View className="items-center justify-center flex flex-col w-20 gap-2 mt-4">
+      {icon}
       <Text
         className={`${focused ? "font-psemibold" : "font-pregular"} text-xs `}
         style={{ color: color }}
@@ -37,13 +32,13 @@ const TabsLayout = () => {
       <Tabs
         screenOptions={{
           tabBarShowLabel: false,
-          tabBarActiveTintColor: "#FFA001",
+          tabBarActiveTintColor: "#80af49",
           tabBarInactiveTintColor: "#CDCDE0",
           tabBarStyle: {
             backgroundColor: "#161622",
             borderTopWidth: 1,
             borderTopColor: "#232533",
-            height: 50,
+            height: 60,
           },
         }}
       >
@@ -55,11 +50,7 @@ const TabsLayout = () => {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 name="Home"
-                icon={<AntDesign 
-                  name="home" 
-                  size={24} 
-                  color={color} 
-                  />}
+                icon={<AntDesign name="home" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -74,11 +65,7 @@ const TabsLayout = () => {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 name="Categories"
-                icon={<MaterialIcons 
-                  name="category" 
-                  size={24} 
-                  color={color} 
-                  />}
+                icon={<MaterialIcons name="category" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -93,11 +80,7 @@ const TabsLayout = () => {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 name="Advertise"
-                icon={<FontAwesome5 
-                  name="ad" 
-                  size={24} 
-                  color={color} 
-                  />}
+                icon={<FontAwesome5 name="ad" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />
@@ -133,10 +116,7 @@ const TabsLayout = () => {
             tabBarIcon: ({ color, focused }) => (
               <TabIcon
                 name="Profile"
-                icon={<AntDesign 
-                  name="profile" 
-                  size={24} 
-                  color="black" />}
+                icon={<AntDesign name="user" size={24} color={color} />}
                 color={color}
                 focused={focused}
               />

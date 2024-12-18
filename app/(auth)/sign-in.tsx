@@ -76,14 +76,14 @@ const SignIn = () => {
             />
             <CustomButton
               title={`${isSubmitting ? "Loading..." : "SIGN IN"}`}
-              handlePress={() => {router.push("/(tabs)/home")}}
+              handlePress={() => {router.replace("/home")}}
               containerStyles="mt-7 bg-primary"
               isLoading={isSubmitting}
               textStyles="text-white font-bold"
             />
             <View className="mt-6 flex-row justify-center">
               <Text className="text-gray-500">Don't Have an account? </Text>
-              <TouchableOpacity onPress={() => router.push("/(auth)/register")}>
+              <TouchableOpacity onPress={() => router.push("/register")}>
                 <Text className="text-primary font-bold">SIGN UP</Text>
               </TouchableOpacity>
             </View>

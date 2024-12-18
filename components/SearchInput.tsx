@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
-import  icons  from "@/constants";
+import  {icons}  from "@/constants";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
 interface SearchInputProps {
@@ -38,7 +38,7 @@ const SearchInput = ({
           isFocusedInput ? "border-secondary" : "border-black-200"
         }`}
       >
-        <Image source={icons.icons.search} />
+        <Image source={icons.search} />
         <TextInput
           className={`flex-1 text-white font-semibold text-base  `}
           value={value}

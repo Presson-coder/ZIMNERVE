@@ -1,6 +1,6 @@
 import { View, Text, TextInput, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
-import icons  from "@/constants";
+import {icons } from "@/constants";
 
 interface FormFieldProps {
   title: string;

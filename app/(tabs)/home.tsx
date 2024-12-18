@@ -7,6 +7,7 @@ import CategoryCard from "@/components/CategoryCard";
 import images from "@/constants/images";
 
 const Home = () => {
+  const user = { first_name: "John" };
   const userNameFirstLetter = user.first_name.charAt(0);
   return (
     <SafeAreaView>
@@ -36,7 +37,7 @@ const Home = () => {
         >
           <CategoryCard
             name="Second hand deals"
-            image={images.secondHand}
+            image={images.Deals}
             onPress={() => router.push("/second-hand-deals")}
           />
           <CategoryCard
@@ -46,7 +47,7 @@ const Home = () => {
           />
           <CategoryCard
             name="Rentals"
-            image={images.rentals}
+            image={images.house}
             onPress={() => router.push("/rentals")}
           />
           <CategoryCard

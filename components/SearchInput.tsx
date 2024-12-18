@@ -1,7 +1,8 @@
 import { View, Text, TextInput, Image, TouchableOpacity } from "react-native";
 import React, { useState } from "react";
-import  {icons}  from "@/constants";
+import { icons } from "@/constants";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import EvilIcons from "@expo/vector-icons/EvilIcons";
 
 interface SearchInputProps {
   title: string;
@@ -26,33 +27,33 @@ const SearchInput = ({
   const [showPassword, setShowPassword] = useState(false);
   const [isFocusedInput, setIsFocusedInput] = useState(false);
 
-    const handleSearch = () => {
-        console.log("searching...");
-    };
+  const handleSearch = () => {
+    console.log("searching...");
+  };
 
   return (
-    <View className={`space-y-2 ${otherStyles}`}>
+    <View className={`space-y-2  ${otherStyles}`}>
       <Text className="text-base text-gray-100 font-pmedium">{title}</Text>
       <View
-        className={`border-2 w-full h-16 px-4 bg-black-100 rounded-2xl focus:border-secondary flex-row items-center border-black-200 ${
+        className={`border w-full h-14 px-4 bg-white rounded-3xl focus:border-secondary flex-row items-center border-white ${
           isFocusedInput ? "border-secondary" : "border-black-200"
         }`}
       >
-        <Image source={icons.search} />
+        <EvilIcons name="search" size={28} color="black" />
         <TextInput
           className={`flex-1 text-white font-semibold text-base  `}
           value={value}
-          placeholder="Search for a vedio topic"
+          placeholder="Search "
           placeholderTextColor={"#7b7b8b"}
           onChangeText={handleChangeText}
           secureTextEntry={title === "Password" && !showPassword}
           onFocus={() => setIsFocusedInput(true)}
           onBlur={() => setIsFocusedInput(false)}
         />
+        <TouchableOpacity onPress={handleSearch}>
+          <AntDesign name="rightcircle" size={29} color="black" />
+        </TouchableOpacity>
       </View>
-      <TouchableOpacity onPress={handleSearch}>
-        <AntDesign name="rightcircle" size={24} color="black" />
-      </TouchableOpacity>
     </View>
   );
 };

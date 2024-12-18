@@ -4,6 +4,7 @@ import { Tabs } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import { StatusBar } from "expo-status-bar";
 
 interface TabIconProps {
   icon: any;
@@ -87,7 +88,7 @@ const TabsLayout = () => {
             ),
           }}
         />
-        <Tabs.Screen
+        {/* <Tabs.Screen
           name="favorites"
           options={{
             title: "Favorites",
@@ -107,7 +108,7 @@ const TabsLayout = () => {
               />
             ),
           }}
-        />
+        /> */}
         <Tabs.Screen
           name="profile"
           options={{
@@ -124,6 +125,7 @@ const TabsLayout = () => {
           }}
         />
       </Tabs>
+      <StatusBar backgroundColor="#fff2" style="dark" />
     </>
   );
 };

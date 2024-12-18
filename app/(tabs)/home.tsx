@@ -37,7 +37,8 @@ const Home = () => {
           <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
-            className="  bg-red-400"
+            contentContainerStyle={{ display: "flex", alignItems: "center", justifyContent: "flex-start", gap: 10 }}
+            className=""
           >
             <CategoryCard
               name="Second hand deals"

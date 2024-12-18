@@ -11,14 +11,19 @@ interface CategoryCardProps {
 
 const CategoryCard = ({ name, image, onPress }: CategoryCardProps) => {
   return (
-    <TouchableOpacity onPress={onPress} className="h-full w-28 rounded-2xl relative">
+    <TouchableOpacity
+      onPress={onPress}
+      className="h-36 w-36  rounded-3xl relative"
+    >
       <Image
         source={image}
-        className="w-28 h-28 rounded-2xl"
-        resizeMode="contain"
+        className="w-36 h-36 rounded-2xl"
+        resizeMode="cover"
       />
-      <View className="insert-0 absolute bg-black opacity-100 rounded-2xl"></View>
-      <Text className=" absolute bottom-5 font-bold text-xs text-primary">{name}</Text>
+      <View className="insert-0 border border-black w-36 h-36 absolute bg-black opacity-35 rounded-2xl"></View>
+      <Text className=" absolute bottom-5 font-bold text-center w-full text-xs text-white">
+        {name}
+      </Text>
     </TouchableOpacity>
   );
 };

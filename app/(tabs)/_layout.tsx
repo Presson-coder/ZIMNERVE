@@ -1,10 +1,11 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, KeyboardAvoidingView, Platform } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
 import { StatusBar } from "expo-status-bar";
+import Feather from "@expo/vector-icons/Feather";
 
 interface TabIconProps {
   icon: any;
@@ -30,101 +31,87 @@ const TabIcon = ({ name, icon, color, focused }: TabIconProps) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs
-        screenOptions={{
-          tabBarShowLabel: false,
-          tabBarActiveTintColor: "#80af49",
-          tabBarInactiveTintColor: "#000",
-          tabBarStyle: {
-            backgroundColor: "#fff",
-            borderTopWidth: 0.1,
-            borderTopColor: "#232533",
-            height: 60,
-          },
-        }}
+      <KeyboardAvoidingView
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        style={{ flex: 1 }}
       >
-        <Tabs.Screen
-          name="home"
-          options={{
-            title: "Home",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Home"
-                icon={<AntDesign name="home" size={24} color={color} />}
-                color={color}
-                focused={focused}
-              />
-            ),
+        <Tabs
+          screenOptions={{
+            tabBarShowLabel: false,
+            tabBarActiveTintColor: "#80af49",
+            tabBarInactiveTintColor: "#000",
+            tabBarStyle: {
+              backgroundColor: "#fff",
+              borderTopWidth: 0.1,
+              borderTopColor: "#232533",
+              height: 60,
+            },
           }}
-        />
-        <Tabs.Screen
-          name="categories"
-          options={{
-            title: "Categories",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Categories"
-                icon={<MaterialIcons name="category" size={24} color={color} />}
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="advertise"
-          options={{
-            title: "Advertise",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Advertise"
-                icon={<FontAwesome5 name="ad" size={24} color={color} />}
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        />
-        {/* <Tabs.Screen
-          name="favorites"
-          options={{
-            title: "Favorites",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Favorites"
-                icon={
-                  <MaterialIcons
-                    name="favorite-outline"
-                    size={24}
-                    color={color}
-                  />
-                }
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        /> */}
-        <Tabs.Screen
-          name="profile"
-          options={{
-            title: "Profile",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Profile"
-                icon={<AntDesign name="user" size={24} color={color} />}
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        />
-      </Tabs>
+        >
+          <Tabs.Screen
+            name="home"
+            options={{
+              title: "Home",
+              headerShown: false,
+              tabBarIcon: ({ color, focused }) => (
+                <TabIcon
+                  name="Home"
+                  icon={<AntDesign name="home" size={24} color={color} />}
+                  color={color}
+                  focused={focused}
+                />
+              ),
+            }}
+          />
+          <Tabs.Screen
+            name="categories"
+            options={{
+              title: "Categories",
+              headerShown: false,
+              tabBarIcon: ({ color, focused }) => (
+                <TabIcon
+                  name="Categories"
+                  icon={
+                    <MaterialIcons name="category" size={24} color={color} />
+                  }
+                  color={color}
+                  focused={focused}
+                />
+              ),
+            }}
+          />
+          <Tabs.Screen
+            name="advertise"
+            options={{
+              title: "Advertise",
+              headerShown: false,
+              tabBarIcon: ({ color, focused }) => (
+                <TabIcon
+                  name="Advertise"
+                  icon={<FontAwesome5 name="ad" size={24} color={color} />}
+                  color={color}
+                  focused={focused}
+                />
+              ),
+            }}
+          />
+          <Tabs.Screen
+            name="profile"
+            options={{
+              title: "Profile",
+              headerShown: false,
+              tabBarIcon: ({ color, focused }) => (
+                <TabIcon
+                  name="Profile"
+                  icon={<Feather name="user" size={24} color={color}/>}
+                  color={color}
+                  focused={focused}
+                />
+              ),
+            }}
+          />
+        </Tabs>
+      </KeyboardAvoidingView>
       <StatusBar backgroundColor="#fff2" style="dark" />
     </>
   );

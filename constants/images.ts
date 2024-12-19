@@ -9,6 +9,7 @@ import Deals from "../assets/images/Deals.jpg";
 import realEstate from "../assets/images/realEstate.jpg";
 import house from "../assets/images/house.jpg";
 import furniture from "../assets/images/furniture.jpg";
+import events from "../assets/images/events.jpg";
 
 export default {
   ZIMNERVE_roundedWithBG,
@@ -22,4 +23,5 @@ export default {
   realEstate,
   house,
   furniture,
+    events,
 };

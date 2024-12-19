@@ -2,11 +2,11 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
 interface AdvertsFilterProps {
-  handlePress: () => void
+  onPress: () => void
   name: string
 }
 
-const AdvertsFilter = ({handlePress, name}: AdvertsFilterProps) => {
+const AdvertsFilter = ({onPress, name}: AdvertsFilterProps) => {
     const [isPressed, setIsPressed] = useState(false);
 
     const handlePressIn = () => {
@@ -21,9 +21,9 @@ const AdvertsFilter = ({handlePress, name}: AdvertsFilterProps) => {
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
       className={`rounded-3xl  px-3 py-1 mx-2 ${
-        isPressed ? `bg-black text-white` : `bg-white`
+        isPressed ? `bg-black ` : `bg-white `
       }`}
-      onPress={handlePress}
+      onPress={onPress}
     >
       <Text
         className={`text-sm text-center ${

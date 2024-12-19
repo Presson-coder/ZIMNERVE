@@ -13,10 +13,54 @@ import CategoryCard from "@/components/CategoryCard";
 import images from "@/constants/images";
 import Entypo from "@expo/vector-icons/Entypo";
 import AdvertsFilter from "@/components/AdvertsFilter";
+import Advert from "@/components/Advert";
+import EmptyState from "@/components/EmptyState";
 
 const Home = () => {
   const user = { first_name: "Presson" };
   const userNameFirstLetter = user.first_name.charAt(0);
+  const data = [
+    {
+      id: "1",
+      name: "Car",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      imageUrl: images.Deals,
+      price: 200,
+      location: "Harare",
+      date: "2022-10-10",
+      category: "Second hand deals",
+    },
+    {
+      id: "2",
+      name: "House for sale",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      imageUrl: images.Deals,
+      price: 2900,
+      location: "Harare",
+      date: "2022-10-10",
+      category: "flash sales",
+    },
+    {
+      id: "3",
+      name: "printer",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      imageUrl: images.Deals,
+      price: 200,
+      location: "Harare",
+      date: "2022-10-10",
+      category: "popular",
+    },
+    {
+      id: "4",
+      name: "FIC Conference",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      imageUrl: images.Deals,
+      price: 300,
+      location: "Harare",
+      date: "2022-10-10",
+      category: "new arrivals",
+    },
+  ];
   return (
     <SafeAreaView>
       <ScrollView className="p-4 ">
@@ -96,12 +140,15 @@ const Home = () => {
               onPress={() => router.push("/")}
             />
           </ScrollView>
-          {/* <FlatList
-          data = {data}
-          renderItem={({item}) => (
-
-          )}
-          /> */}
+            <View className="flex flex-row flex-wrap justify-between ">
+            {data.map((item) => (
+              <View key={item.id} className="w-44 mb-4">
+              <Advert ad={item} />
+              </View>
+            ))}
+            </View>
+            {/* {({ item }) => <Advert ad={item} />} */}
+          
         </View>
       </ScrollView>
     </SafeAreaView>

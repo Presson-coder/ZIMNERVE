@@ -70,10 +70,8 @@ const TabsLayout = () => {
               headerShown: false,
               tabBarIcon: ({ color, focused }) => (
                 <TabIcon
-                  name="Categories"
-                  icon={
-                    <MaterialIcons name="category" size={24} color={color} />
-                  }
+                  name="Explore"
+                  icon={<AntDesign name="search1" size={24} color={color} />}
                   color={color}
                   focused={focused}
                 />
@@ -103,7 +101,7 @@ const TabsLayout = () => {
               tabBarIcon: ({ color, focused }) => (
                 <TabIcon
                   name="Profile"
-                  icon={<Feather name="user" size={24} color={color}/>}
+                  icon={<Feather name="user" size={24} color={color} />}
                   color={color}
                   focused={focused}
                 />
